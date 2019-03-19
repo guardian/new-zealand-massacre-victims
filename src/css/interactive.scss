@@ -1,0 +1,175 @@
+#memorial {
+	width: 100%;
+
+	/*! CSS Used from: Embedded */
+
+	input {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+		-webkit-font-smoothing: antialiased;
+	}
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	input {
+		line-height: normal;
+	}
+	input[type='checkbox'] {
+		box-sizing: border-box;
+		padding: 0;
+	}
+	::-moz-selection {
+		background: #ffe500;
+		color: #121212;
+	}
+	::selection {
+		background: #ffe500;
+		color: #121212;
+	}
+
+	@media screen {
+		[type=checkbox] {
+			float: left;
+			height: 0.8125rem;
+			margin-left: -1.25rem;
+			margin-top: 0.125rem;
+			width: 0.8125rem;
+		}
+	}
+
+	.person-row {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px;
+		border-bottom: 1px dotted white;
+	}
+	.body-text {
+		margin: auto;
+	}
+	@media (min-width: 20em) and (max-width: 61.24em) {
+		.body-text {
+			width: calc(100% - 40px);
+		}
+	}
+	@media (min-width: 61.25em) {
+		.body-text {
+			width: 80%;
+		}
+	}
+	@media (min-width: 20em) and (max-width: 61.24em) {
+		.read-more-wrap p:first-of-type {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+	@media (min-width: 61.25em) {
+		.read-more-wrap p:first-of-type {
+			font-size: 22px;
+			line-height: 26px;
+		}
+	}
+	.read-more-state {
+		display: none;
+	}
+	.read-more-target {
+		max-height: 0;
+		font-size: 0;
+		transition: .25s ease;
+		display: none;
+	}
+	.read-more-state:checked~.read-more-wrap .read-more-target {
+		display: block;
+		font-size: inherit;
+		max-height: 999em;
+	}
+	.read-more-wrap h2 {
+		margin-bottom: 10px;
+		color: #e00000;
+		font-weight: 200;
+	}
+	span.read-more-target p {
+		font-size: 18px!important;
+		line-height: 22px;
+	}
+	.read-more-state~.read-more-trigger:before {
+		content: 'Read more';
+		color: darkgrey;
+	}
+	.read-more-state:checked~.read-more-trigger:before {
+		content: 'Show less';
+		color: darkgrey;
+	}
+	.read-more-trigger {
+		cursor: pointer;
+		display: inline-block;
+		font-size: .9em;
+		line-height: 2;
+	}
+
+
+}
+
+.victim_container {
+	max-width: 980px;
+	margin: auto;
+}
+
+.memorial_container {
+	width: 100%;
+}
+
+.header_title h1 {
+	font-family: "Guardian Titlepiece","Guardian Headline Full","Guardian Headline","Guardian Egyptian Web",Georgia,serif;
+	font-weight: 700;
+	color: white;
+	font-size: 60px;
+	line-height: 64px;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 30px;
+	color: darkgrey;
+}
+
+.person-row h1 {
+	font-family: "Guardian Titlepiece","Guardian Headline Full","Guardian Headline","Guardian Egyptian Web",Georgia,serif;
+	font-weight: 700;
+	color: white;
+	font-size: 48px;
+	line-height: 52px;
+}
+
+.person-row p {
+	color: white;
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.header_container {
+	width: 100%;
+	display: inline-block;
+}
+
+.header_image {
+	width: 25%;
+	float: left;
+	height: 0px;
+	padding-bottom: 15%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+
+.intro_container {
+	color: white;
+	font-size: 22px;
+	line-height: 26px;
+	max-width: 980px;
+	margin: auto;
+	margin-top: 20px;
+	box-sizing: border-box;
+	padding: 20px;
+}

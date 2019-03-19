@@ -1,0 +1,17 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+
+
+@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+body {
+	background-color: black;
+}
+
+@import "interactive";

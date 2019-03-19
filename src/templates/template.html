@@ -1,0 +1,39 @@
+<div class="memorial_container">
+
+	<div class="header_title"><h1>The victims</h1></div>
+
+	<div class="header_container">
+
+		{{#each images}}
+
+			<div class="header_image" style="background-image: url({{this}})"></div>
+
+		{{/each}}
+		
+	</div>
+
+	<div class="intro_container">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget rutrum est. Nulla feugiat ut nunc eget congue. Aliquam aliquam blandit augue. Praesent placerat elit ipsum, vel finibus nunc vulputate in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque cursus suscipit gravida. In id dolor dignissim, suscipit eros porttitor, consectetur purus. Suspendisse vel sagittis tellus. Nulla id sem ut elit sodales iaculis aliquet vitae quam. Sed mi massa, cursus et hendrerit nec, mollis in purus.
+	</div>
+
+	<div class="victim_container">
+
+		{{#each victims}}
+
+		<div class="person-row">
+			<div class="body-text">
+				<input class="read-more-state" id="post-{{index}}" type="checkbox" value="on">
+				<div class="read-more-wrap">
+					<h1>{{name}}</h1>
+					<p>{{quote}}</p>
+					<span class="read-more-target"></span>
+					<p><span class="read-more-target">{{text}}</span></p>
+				</div>
+				<label class="read-more-trigger" for="post-{{index}}"></label>
+			</div>
+		</div>
+
+		{{/each}}
+
+	</div>	
+</div>
