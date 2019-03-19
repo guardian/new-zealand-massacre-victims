@@ -2,6 +2,8 @@ import template from '../../templates/template.html'
 import { Toolbelt } from '../modules/toolbelt'
 import { $, $$, round, numberWithCommas, wait, getDimensions } from '../modules/util'
 import Ractive from 'ractive'
+import ractiveEventsHover from 'ractive-events-hover'
+import Tooltip from '../modules/tooltip'
 Ractive.DEBUG = false;
 
 export class Christchurch {
@@ -22,7 +24,13 @@ export class Christchurch {
 
             if (self.googledoc[i].image!="") {
 
-                self.images.push(self.googledoc[i].image)
+                let obj = {}
+
+                obj["name"] = self.googledoc[i].name
+
+                obj["image"] = self.googledoc[i].image
+
+                self.images.push(obj)
 
             }
 
@@ -46,9 +54,15 @@ export class Christchurch {
         var self = this
 
         this.ractive = new Ractive({
+            events: { 
+                hover: ractiveEventsHover
+            },
             el: '#memorial',
             data: self.database,
             template: template,
+            decorators: {
+                tooltip: Tooltip
+            }
         })
 
         this.rotation()
@@ -65,12 +79,25 @@ export class Christchurch {
 
             let victim =  Math.floor(Math.random() * Math.floor(self.images.length));
 
-            if (self.display.indexOf(self.images[victim]) === -1) {
+            let name = self.images[victim].name
+
+            let identity = self.display.filter(function(item, index) {
+
+                return item.name === name
+
+            });
+
+            if (identity.length < 1) {
+
+                const removeElements = (elms) => elms.forEach(el => el.remove());
+
+                removeElements( document.querySelectorAll(".tooltip") );
 
                 self.display.splice(random, 1, self.images[victim]);
 
                 self.ractive.set('images', self.display);  
             }
+
 
         }, 3000);
 

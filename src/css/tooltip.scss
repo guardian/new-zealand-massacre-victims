@@ -1,0 +1,45 @@
+@import "mq";
+
+.tooltip {
+    width: 300px;
+    position: absolute;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.30);
+    z-index: 99;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    
+    @include mq(tablet) {
+        pointer-events: none;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+
+    .more {
+        color: #bdbdbd;
+        font-style: italic;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+
+}
+

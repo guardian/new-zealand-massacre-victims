@@ -6,7 +6,7 @@
 
 		{{#each images}}
 
-			<div class="header_image" style="background-image: url({{this}})"></div>
+			<span as-tooltip='this.name'><div class="header_image" style="background-image: url({{image}})"></div></span>
 
 		{{/each}}
 		
