@@ -4,7 +4,6 @@ import { $, $$, round, numberWithCommas, wait, getDimensions } from '../modules/
 import Ractive from 'ractive'
 import ractiveEventsHover from 'ractive-events-hover'
 import Tooltip from '../modules/tooltip'
-Ractive.DEBUG = false;
 
 export class Christchurch {
 
@@ -99,7 +98,7 @@ export class Christchurch {
             }
 
 
-        }, 3000);
+        }, 1500);
 
     }
 

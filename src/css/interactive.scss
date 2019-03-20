@@ -1,7 +1,30 @@
 #memorial {
 	width: 100%;
 
-	/*! CSS Used from: Embedded */
+	/* unvisited link */
+	a:link {
+	  color: lightgrey;
+	  font-weight: 500;
+	  text-decoration: underline;
+	}
+
+	/* visited link */
+	a:visited {
+	  color: darkgrey;
+	  font-weight: 500;
+	}
+
+	/* mouse over link */
+	a:hover {
+	  color: lightgrey;
+	  font-weight: 500;
+	}
+
+	/* selected link */
+	a:active {
+	  color: lightgrey;
+	  font-weight: 500;
+	}
 
 	input {
 		color: inherit;
@@ -61,13 +84,13 @@
 	@media (min-width: 20em) and (max-width: 61.24em) {
 		.read-more-wrap p:first-of-type {
 			font-size: 18px;
-			line-height: 24px;
+			line-height: 22px;
 		}
 	}
 	@media (min-width: 61.25em) {
 		.read-more-wrap p:first-of-type {
-			font-size: 22px;
-			line-height: 26px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 	}
 	.read-more-state {
@@ -121,6 +144,8 @@
 }
 
 .header_title h1 {
+	box-sizing: border-box;
+	padding: 20px;
 	font-family: "Guardian Titlepiece","Guardian Headline Full","Guardian Headline","Guardian Egyptian Web",Georgia,serif;
 	font-weight: 700;
 	color: white;
@@ -128,7 +153,6 @@
 	line-height: 64px;
 	text-align: center;
 	margin-top: 70px;
-	margin-bottom: 30px;
 	color: darkgrey;
 }
 
@@ -161,15 +185,24 @@
 	background-position: center center;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
+    transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -webkit-transition: all 1s;
+    transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 1s 
 }
 
 .intro_container {
 	color: white;
 	font-size: 22px;
-	line-height: 26px;
-	max-width: 980px;
+	line-height: 28px;
+	max-width: 1000px;
 	margin: auto;
 	margin-top: 20px;
 	box-sizing: border-box;
 	padding: 20px;
+	padding-bottom: 40px;
+	border-bottom: 1px dotted white;
+
 }
